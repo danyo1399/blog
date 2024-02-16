@@ -6,4 +6,6 @@ const nextConfig = {
   pageExtensions: ["js", "jsx", "mdx", "md", "ts", "tsx"],
 };
 
-export default withMDX()(nextConfig);
+export default withMDX({
+  extension: /\.mdx?$/,
+})(nextConfig);

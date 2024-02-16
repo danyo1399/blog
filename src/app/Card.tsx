@@ -8,11 +8,11 @@ export function Card(props: {
 }) {
   const { title, imageUrl, description, url } = props;
   return (
-    <div className="w-min">
+    <div className="max-w-[400px] min-w-[300px]">
       <Link href={url}>
         <img
           alt="Card Image"
-          className="block min-w-[300px] w-[300px] h-[200px] rounded-lg object-cover"
+          className="block w-full rounded-lg object-cover"
           src={imageUrl}
         />
         <h4 className="font-semibold text-lg mt-4 mb-2">{title}</h4>
