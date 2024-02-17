@@ -12,13 +12,12 @@ export default async function Home() {
         />
         <div className="space-y-5 dark:text-gray-400 text-gray-600 leading-8">
           <p>
-            As a technology enthusist and experienced Software Engineer, Tech
-            Lead, and Architect, I enjoy designing and delivering frontend and
-            backend solutions. My expertise lies in leveraging Single Page
-            Applications (SPAs), Meta frameworks, and monorepo frontend
-            technologies. For backend architectures, I focus on building
-            scalable, event-driven microservices using event sourcing
-            principles.
+            As a technology enthusist and experienced Engineering Lead /
+            Architect, I enjoy designing and delivering frontend and backend
+            solutions. My expertise lies in leveraging Single Page Applications
+            (SPAs), Meta frameworks, and monorepo frontend technologies. For
+            backend architectures, I focus on building scalable, event-driven
+            microservices using event sourcing principles.
           </p>
         </div>
       </div>

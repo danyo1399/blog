@@ -1,10 +1,7 @@
 "use client";
-import { useClient } from "@/hooks/useClient";
 import Script from "next/script";
 
 export function GoogleA() {
-  // const client = useClient();
-  // if (!client) return null;
   return (
     <>
       <Script
