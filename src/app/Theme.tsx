@@ -1,11 +1,19 @@
-'use client';
-import { ReactNode, createContext, useContext, useEffect, useState } from "react";
+"use client";
+import {
+  ReactNode,
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
 export type ThemeContext = { dark: boolean | undefined; toggle: () => void };
 const themeContext = createContext<ThemeContext | null>(null);
+
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [dark, setDark] = useState<boolean>();
   useEffect(() => {
+    document.body.classList.remove("hidden");
     if (
       localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
@@ -17,7 +25,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       document.documentElement.classList.remove("dark");
       setDark(false);
     }
-    document.body.classList.remove("hidden");
   }, []);
   const toggle = () => {
     // if (localStorage === empty) return;
@@ -29,12 +36,12 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     } else {
       localStorage.theme = "light";
       document.documentElement.classList.remove("dark");
-      setDark(false)
+      setDark(false);
     }
   };
   return (
     <>
-      <themeContext.Provider value={{dark, toggle}}>
+      <themeContext.Provider value={{ dark, toggle }}>
         {children}
       </themeContext.Provider>
     </>
@@ -43,8 +50,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
 export function useTheme() {
   const context = useContext(themeContext);
-  if(context == null) {
-    throw new Error('Theme context not initialised');
+  if (context == null) {
+    throw new Error("Theme context not initialised");
   }
   return context;
 }

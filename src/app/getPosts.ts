@@ -7,7 +7,7 @@ async function getData(key: string) {
   if (metadata.key !== key) {
     throw new Error(`key mismatch ${key} != ${metadata.key}`);
   }
-  const cardImage = `/blog-assets/${key}/card.png`;
+  const cardImage = `/blog-assets/${key}/card.webp`;
   return {
     title: metadata.title,
     description: metadata.description,
