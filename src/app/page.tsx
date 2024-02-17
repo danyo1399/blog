@@ -24,7 +24,7 @@ export default async function Home() {
       <div>
         <h2 className="mb-10 font-semibold text-xl">Recently Published</h2>
 
-        <div className="grid place-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-center gap-8">
+        <div className="grid max-sm:place-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-center gap-8">
           {posts.map((post) => (
             <Card
               key={post.key}
