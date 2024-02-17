@@ -19,8 +19,8 @@ export default function Giscus() {
   }
   const themeProp = theme.dark ? "dark" : "light";
   return (
-    <>
-      <div className="leading-8"></div>
+    <div className="mt-20">
+
       <giscus-widget
         repo="danyo1399/blog"
         repo-id="R_kgDOLST4EA"
@@ -34,6 +34,6 @@ export default function Giscus() {
         theme={themeProp}
         lang="en"
       ></giscus-widget>
-    </>
+    </div>
   );
 }
