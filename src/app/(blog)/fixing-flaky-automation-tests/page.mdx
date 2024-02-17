@@ -21,9 +21,9 @@ One effective strategy to mitigate the impact of flaky tests involves setting up
 Implementing such a strategy not only aids in pinpointing the problematic tests but also fosters a culture of continuous improvement and reliability in the testing process. By systematically addressing the challenges posed by flaky tests, development teams can enhance the stability of their CI/CD pipelines, ultimately leading to more reliable and efficient development cycles.
 
 ## High Level Steps
-- Establish a dedicated build pipeline to run all tests from a clean state of the main branch at three-hour intervals. This frequency ensures timely detection of flaky tests and maintains the health of your codebase.
-- Regularly review the build pipeline logs to identify and systematically address flaky tests. Measure progress by tracking the increase in successful (green) test runs over time. This metric serves as an indicator of improving test stability.
-- Upon achieving test stability, continue using build logs to promptly identify any newly introduced flaky tests. Collaborate with the responsible developer to ensure immediate resolution, maintaining the integrity of your test suite.
+- **Setup Pipeline** - Establish a dedicated build pipeline to run all tests from a clean state of the main branch at three-hour intervals. This frequency ensures timely detection of flaky tests and maintains the health of your codebase.
+- **Fix Tests** - Regularly review the build pipeline logs to identify and systematically address flaky tests. Measure progress by tracking the increase in successful (green) test runs over time. This metric serves as an indicator of improving test stability.
+- **Monitor** - Upon achieving test stability, continue using build logs to promptly identify any newly introduced flaky tests. Collaborate with the responsible developer to ensure immediate resolution, maintaining the integrity of your test suite.
 
 ![Build Runs](/blog-assets/fixing-flaky-automation-tests/failed-pr-pipeline.png)
 

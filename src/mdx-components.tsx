@@ -25,8 +25,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     li: ({ children }: any) => (
       <li className="flex gap-2 items-center">
-        <ArrowRightIcon className="text-blue-500" />
-        {children}
+        <ArrowRightIcon className="min-w-5 w-5 text-blue-500" />
+        <div>{children}</div>
       </li>
     ),
     ...components,

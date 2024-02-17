@@ -8,7 +8,7 @@ export default async function Home() {
         <img
           alt="avatar"
           className="rounded-full w-32"
-          src="/android-chrome-192x192.png"
+          src="/avatar.webp"
         />
         <div className="space-y-5 dark:text-gray-400 text-gray-600 leading-8">
           <p>
