@@ -8,6 +8,8 @@ import { LightDarkButton } from "./LightDarkButton";
 import Link from "next/link";
 import { ThemeProvider } from "./Theme";
 import { urls } from "@/urls";
+import Script from "next/script";
+import { GoogleA } from "./GoogleA";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,6 +37,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Content>{children}</Content>
         </ThemeProvider>
+        <GoogleA />
       </body>
     </html>
   );
