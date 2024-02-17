@@ -1,23 +1,21 @@
+import { MetaData } from "@/models";
+
 const blogRootPath = "./(blog)";
-const cache: any = {};
 async function getData(title: string) {
   const key = title.replaceAll(" ", "-").toLowerCase();
-  if (cache[key] == null) {
-    // const { meta }: any = await import(pagePath);
-    const { meta }: any = await import(`${blogRootPath}/${key}/meta`);
-    // const { meta }: any = await import(
-    //   "./(blog)/fixing-flaky-automation-tests/meta"
-    // );
-    cache[key] = meta;
-  }
-  const meta = cache[key];
+
+  const { metadata }: { metadata: MetaData } = await import(
+    `${blogRootPath}/${key}/meta`
+  );
   const cardImage = `/blog-assets/${key}/card.png`;
   return {
-    title: meta.title,
-    description: meta.description,
+    title: metadata.title,
+    description: metadata.description,
     url: `/${key}`,
     cardImage,
     key,
+    createDate: metadata.createDate,
+    lastModifiedDate: metadata.lastModifiedDate,
   };
 }
 

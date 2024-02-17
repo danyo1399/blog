@@ -8,8 +8,8 @@ import { LightDarkButton } from "./LightDarkButton";
 import Link from "next/link";
 import { ThemeProvider } from "./Theme";
 import { urls } from "@/urls";
-import Script from "next/script";
 import { GoogleA } from "./GoogleA";
+import { constants } from "@/constants";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +17,8 @@ export const metadata: Metadata = {
   title: "Danyo's Blog",
   description:
     "I'm a technology enthusist with a passion for software development and architecture.",
-  openGraph: { images: urls.getFullPath("ogimage.png"), type: "website" },
+  openGraph: { images: "/ogimage.png", type: "website" },
+  metadataBase: new URL(constants.hostname)
 };
 
 export default function RootLayout({
