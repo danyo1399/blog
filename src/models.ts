@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 
 export type MetaData = {
+  title: string,
+  description: string,
   createDate: string;
   lastModifiedDate: string;
-} & Metadata;
+} & Omit<Metadata,'title' | 'description' >;

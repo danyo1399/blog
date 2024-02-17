@@ -3,7 +3,13 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ReactNode } from "react";
 import { cx } from "@/utils";
-import { LinkedinIcon, MoonIcon, SunIcon, TwitterIcon } from "lucide-react";
+import {
+  LinkedinIcon,
+  MoonIcon,
+  RssIcon,
+  SunIcon,
+  TwitterIcon,
+} from "lucide-react";
 import { LightDarkButton } from "./LightDarkButton";
 import Link from "next/link";
 import { ThemeProvider } from "./Theme";
@@ -18,7 +24,7 @@ export const metadata: Metadata = {
   description:
     "I'm a technology enthusist with a passion for software development and architecture.",
   openGraph: { images: "/ogimage.png", type: "website" },
-  metadataBase: new URL(constants.hostname)
+  metadataBase: new URL(constants.hostname),
 };
 
 export default function RootLayout({
@@ -52,20 +58,31 @@ function Content({ children }: { children: ReactNode }) {
           <span className="hidden sm:block">Dan Young</span>
           <span className="block sm:hidden">DanYo</span>
         </Link>
-        <div className="absolute flex items-center gap-5 right-5">
-          <Link href="https://www.linkedin.com/in/danyonz" target="_blank">
+        <div className="absolute flex items-center gap-6 sm:gap-10 right-5">
+          <Link
+            title="Linkedin"
+            href="https://www.linkedin.com/in/danyonz"
+            target="_blank"
+          >
             <LinkedinIcon
               className="dark:fill-gray-100 fill-gray-600"
               strokeWidth={0}
             />
           </Link>
-          <Link href="https://twitter.com/danyo1399" target="_blank">
+          <Link
+            title="Twitter"
+            href="https://twitter.com/danyo1399"
+            target="_blank"
+          >
             <TwitterIcon
               className="dark:fill-gray-100 fill-gray-600"
               strokeWidth={0}
             />
           </Link>
           <LightDarkButton />
+          <Link href="/rss.xml" title="RSS Feed">
+            <RssIcon />
+          </Link>
         </div>
       </header>
       <main className="mt-6 ">{children}</main>
