@@ -1,6 +1,6 @@
 import { constants } from "@/constants";
+import { getPosts } from "@/posts/getPosts";
 import rss from "rss";
-import { getPosts } from "../getPosts";
 
 export async function GET() {
   const posts = await getPosts();

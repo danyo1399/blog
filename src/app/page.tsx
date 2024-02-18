@@ -1,23 +1,20 @@
+import { getPosts } from "@/posts/getPosts";
 import { Card } from "./Card";
-import { getPosts } from "./getPosts";
 export default async function Home() {
   const posts = await getPosts();
   return (
     <main className="space-y-10">
       <div className="flex gap-10 items-center flex-col md:flex-row">
-        <img
-          alt="avatar"
-          className="rounded-full w-32"
-          src="/avatar.webp"
-        />
+        <img alt="avatar" className="rounded-full w-32" src="/avatar.webp" />
         <div className="space-y-5 dark:text-gray-400 text-gray-600 leading-8">
           <p>
             As a technology enthusist and experienced Engineering Lead /
-            Architect, I enjoy designing and delivering frontend and backend
-            solutions. My expertise lies in leveraging Single Page Applications
-            (SPAs), Meta frameworks, and monorepo frontend technologies. For
-            backend architectures, I focus on building scalable, event-driven
-            microservices using event sourcing principles.
+            Software Architect, I enjoy designing and delivering frontend and
+            backend solutions. My frontend expertise lies in leveraging Single
+            Page Applications (SPAs), Meta frameworks, and monorepo frontend
+            technologies. For backend architectures, I focus on building
+            scalable, event-driven microservices using event sourcing
+            principles.
           </p>
         </div>
       </div>

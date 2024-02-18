@@ -1,7 +1,7 @@
 import { constants } from "@/constants";
+import { getPosts } from "@/posts/getPosts";
 import { SitemapStream, streamToPromise } from "sitemap";
 import { Readable } from "stream";
-import { getPosts } from "../getPosts";
 
 export async function GET() {
   const posts = await getPosts();
