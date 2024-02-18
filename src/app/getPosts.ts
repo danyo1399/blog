@@ -23,5 +23,5 @@ export async function getPosts() {
   return [
     await getData("fixing-flaky-automation-tests"),
     await getData("the-lucky-days-sizing-guide-for-development-estimations"),
-  ];
+  ].reverse();
 }
