@@ -16,6 +16,7 @@ import { ThemeProvider } from "./Theme";
 import { urls } from "@/urls";
 import { GoogleA } from "./GoogleA";
 import { constants } from "@/constants";
+import { SearchIcon } from "./SearchIcon/SearchIcon";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +35,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-black">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
+        />
+      </head>
       <body
         className={cx(
           inter.className,
@@ -58,6 +65,7 @@ function Content({ children }: { children: ReactNode }) {
           <span className="hidden sm:block">Dan Young</span>
           <span className="block sm:hidden">DanYo</span>
         </Link>
+        <SearchIcon />
         <div className="absolute flex items-center gap-6 sm:gap-10 right-5">
           <Link
             title="Linkedin"

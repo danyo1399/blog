@@ -18,3 +18,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Add mobile slide out menu
 - add categories / tags
 - add post section links
+- add tailwind typography
