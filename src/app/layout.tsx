@@ -40,6 +40,7 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
         />
+        <link rel="sitemap" href="/sitemap.xml" type="application/xml"/>
       </head>
       <body
         className={cx(

@@ -6,23 +6,24 @@
         }
                 .DocSearch-Button {
                   display: grid;
+                  background-color: transparent !important;
+                  color: white !important;
                   place-content: center;
-                  padding: 0.1rem !important;
+                  padding: 0.5rem !important;
 
                   margin:0 !important;
                   margin-left:1.2rem !important;
                   height:auto !important;
                   width: auto !important;
                 }
-        .DocSearch-Button::before {
-          content:'';
+        .DocSearch-Button svg {
           width:1.5rem;
 
-          height: 1.5rem;
-          background:no-repeat;
-          background-position: center;
-          background-size: 1.1rem;
-          background-image: url(./search.svg);
+          color:black;
           display:block;
 
+        }
+
+        .dark .DocSearch-Button svg {
+         color: white; 
         }

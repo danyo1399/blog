@@ -18,7 +18,7 @@ export async function GET() {
     feed.item({
       title: x.title,
       description: x.description,
-      url: `${constants.hostname}/${x.url}`,
+      url: `${constants.hostname}${x.url}`,
       date: x.createDate,
     });
   });
